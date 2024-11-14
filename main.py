@@ -21,7 +21,6 @@ class App:
         title_label = tk.Label(root, text="Tanuló Nyilvántartó", font=("Arial", 20, "bold"), pady=10)
         title_label.pack()
 
-
         form_frame = tk.Frame(root, padx=20, pady=10)
         form_frame.pack(fill="x", padx=20, pady=10)
 
