@@ -84,6 +84,7 @@ Tanuló Törlése: Kiválasztott tanuló törlése.
 
 Szerkesztés: A kiválasztott tanuló adatainak szerkesztése.
 
+
 ### Kódlogika
 
 A kód alapvetően két fő komponensből áll:
