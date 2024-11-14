@@ -88,6 +88,7 @@ Szerkesztés: A kiválasztott tanuló adatainak szerkesztése.
 
 A kód alapvetően két fő komponensből áll:
 
+
 Adatbázis-kezelő modul (HE_Modul.py): Ez az osztály végzi az adatbázissal kapcsolatos műveleteket.
 Grafikus felület (main.py): A felhasználói interfészt és az adatbeviteli/lekérdezési logikát tartalmazza, amely a HEOsztaly objektum segítségével végzi el a kéréseket.
 
