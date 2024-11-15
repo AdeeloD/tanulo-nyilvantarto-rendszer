@@ -22,11 +22,11 @@ class HEOsztaly:
             print(f"Adatbázis kapcsolódási hiba: {e}")
 
     @staticmethod
-    def is_valid_neptun_code(neptun_kod):
+    def is_valid_neptun_code_HE(neptun_kod):
         return bool(re.match(r"^[A-Za-z0-9]{6}$", neptun_kod))
 
     def uj_tanulo_hozzaadasa_HE(self, nev, neptun_kod, email, nemzetiseg, osztondijas, szuletesi_datum, megjegyzes):
-        if not self.is_valid_neptun_code(neptun_kod):
+        if not self.is_valid_neptun_code_HE(neptun_kod):
             return "Érvénytelen Neptun kód formátum!"
 
         try:
@@ -54,7 +54,7 @@ class HEOsztaly:
             return []
 
     def tanulo_torlese_HE(self, neptun_kod):
-        if not self.is_valid_neptun_code(neptun_kod):
+        if not self.is_valid_neptun_code_HE(neptun_kod):
             return "Érvénytelen Neptun kód formátum!"
 
         try:
@@ -69,7 +69,7 @@ class HEOsztaly:
             return f"Hiba a törlés során: {e}"
 
     def tanulo_modositasa_HE(self, neptun_kod, nev, email, nemzetiseg, osztondijas, szuletesi_datum, megjegyzes):
-        if not self.is_valid_neptun_code(neptun_kod):
+        if not self.is_valid_neptun_code_HE(neptun_kod):
             return "Érvénytelen Neptun kód formátum!"
 
         try:
