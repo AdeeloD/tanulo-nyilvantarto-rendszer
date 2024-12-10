@@ -39,7 +39,7 @@ class HEOsztaly:
             return "Tanuló sikeresen hozzáadva!"
 
         except psycopg2.Error as e:
-            self.conn.rollback()  # Hiba esetén visszaállítjuk a tranzakciót
+            self.conn.rollback()
             return f"Hiba a hozzáadás során: {e}"
 
     def tanulok_lekerdezese_HE(self):
@@ -49,7 +49,7 @@ class HEOsztaly:
             return self.cursor.fetchall()
 
         except psycopg2.Error as e:
-            self.conn.rollback()  # Visszaállítás hiba esetén
+            self.conn.rollback()
             print(f"Hiba a lekérdezés során: {e}")
             return []
 
@@ -65,7 +65,7 @@ class HEOsztaly:
             self.conn.commit()
             return "Tanuló sikeresen törölve!"
         except psycopg2.Error as e:
-            self.conn.rollback()  # Hiba esetén visszaállítjuk a tranzakciót
+            self.conn.rollback()
             return f"Hiba a törlés során: {e}"
 
     def tanulo_modositasa_HE(self, neptun_kod, nev, email, nemzetiseg, osztondijas, szuletesi_datum, megjegyzes):
